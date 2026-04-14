@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Александра Березина - Главный бизнес советник АО Альфа-Банк">
+  <title>Александра Березина | Альфа-Банк</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: linear-gradient(135deg, #ef3124 0%, #c41e1a 100%);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+    
+    .card {
+      background: white;
+      border-radius: 24px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+      max-width: 480px;
+      width: 100%;
+      overflow: hidden;
+      animation: slideIn 0.6s ease-out;
+    }
+    
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .header {
+      background: #ef3124;
+      padding: 30px;
+      text-align: center;
+      position: relative;
+    }
+    
+    .logo {
+      width: 120px;
+      height: auto;
+      margin-bottom: 20px;
+      filter: brightness(0) invert(1);
+    }
+    
+    .avatar {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      margin: 0 auto;
+      display: block;
+    }
+    
+    .content {
+      padding: 30px;
+    }
+    
+    .name {
+      font-size: 28px;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+    
+    .position {
+      font-size: 16px;
+      color: #ef3124;
+      font-weight: 600;
+      margin-bottom: 4px;
+      text-align: center;
+    }
+    
+    .company {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+    
+    .services {
+      background: #f8f9fa;
+      border-left: 4px solid #ef3124;
+      padding: 16px;
+      margin-bottom: 24px;
+      border-radius: 8px;
+    }
+    
+    .services-title {
+      font-size: 13px;
+      color: #666;
+      margin-bottom: 8px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .service-item {
+      font-size: 14px;
+      color: #333;
+      margin: 6px 0;
+      display: flex;
+      align-items: center;
+    }
+    
+    .service-item:before {
+      content: "✓";
+      color: #ef3124;
+      font-weight: bold;
+      margin-right: 8px;
+      font-size: 16px;
+    }
+    
+    .contacts {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px 24px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 15px;
+      transition: all 0.3s ease;
+      gap: 12px;
+    }
+    
+    .btn-primary {
+      background: #ef3124;
+      color: white;
+      box-shadow: 0 4px 12px rgba(239, 49, 36, 0.3);
+    }
+    
+    .btn-primary:hover {
+      background: #d42a1f;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(239, 49, 36, 0.4);
+    }
+    
+    .btn-secondary {
+      background: #f0f0f0;
+      color: #333;
+    }
+    
+    .btn-secondary:hover {
+      background: #e0e0e0;
+      transform: translateY(-2px);
+    }
+    
+    .btn-whatsapp {
+      background: #25D366;
+      color: white;
+    }
+    
+    .btn-whatsapp:hover {
+      background: #128C7E;
+      transform: translateY(-2px);
+    }
+    
+    .btn-telegram {
+      background: #0088cc;
+      color: white;
+    }
+    
+    .btn-telegram:hover {
+      background: #006699;
+      transform: translateY(-2px);
+    }
+    
+    .icon {
+      width: 20px;
+      height: 20px;
+    }
+    
+    .footer {
+      text-align: center;
+      padding: 20px;
+      color: #999;
+      font-size: 12px;
+      border-top: 1px solid #eee;
+    }
+    
+    .phone-link {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    @media (max-width: 480px) {
+      .name {
+        font-size: 24px;
+      }
+      
+      .content {
+        padding: 20px;
+      }
+      
+      .header {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="header">
+      <!-- Логотип Альфа-Банка -->
+      <svg class="logo" viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg">
+        <text x="50" y="28" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white" text-anchor="middle">АЛЬФА</text>
+      </svg>
+      
+      <!-- Ваше фото -->
+      <img src="IMG_20260414_191256.jpg" alt="Александра Березина" class="avatar">
+    </div>
+    
+    <div class="content">
+      <h1 class="name">Александра Березина</h1>
+      <div class="position">Главный бизнес советник</div>
+      <div class="company">АО Альфа-Банк</div>
+      
+      <div class="services">
+        <div class="services-title">Специальные предложения</div>
+        <div class="service-item">Регистрация ИП, ООО бесплатно</div>
+        <div class="service-item">Открытие счета в Альфа Банке</div>
+      </div>
+      
+      <div class="contacts">
+        <a href="tel:+79158514447" class="btn btn-primary">
+          <svg class="icon" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+          </svg>
+          +7 (915) 851-44-47
+        </a>
+        
+        <a href="tel:+79056843370" class="btn btn-secondary">
+          <svg class="icon" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+          </svg>
+          +7 (905) 684-33-70
+        </a>
+        
+        <a href="mailto:ASBerezina@alfabank.ru" class="btn btn-secondary">
+          <svg class="icon" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+          </svg>
+          ASBerezina@alfabank.ru
+        </a>
+        
+        <a href="https://wa.me/79158514447" class="btn btn-whatsapp" target="_blank">
+          <svg class="icon" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+          </svg>
+          Написать в WhatsApp
+        </a>
+      </div>
+    </div>
+    
+    <div class="footer">
+      © 2026 АО «Альфа-Банк». Генеральная лицензия ЦБ РФ № 1326<br>
+      Данные актуальны на момент просмотра
+    </div>
+  </div>
+</body>
+</html>
